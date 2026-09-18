@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Compile check
+        run: python -m py_compile core.py pocketpsx_gui.py cli.py
+      - name: Core smoke test (no network writes)
+        run: |
+          python -c "import core; print('stable fn:', callable(core.get_latest_stable_version)); print('bios:', core.check_bios(__import__('pathlib').Path('.')))"

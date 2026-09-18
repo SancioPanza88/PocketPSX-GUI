@@ -1,0 +1,4 @@
+requests>=2.31
+py7zr>=0.20
+customtkinter>=5.2
+Pillow>=10.0

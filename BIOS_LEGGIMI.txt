@@ -1,0 +1,13 @@
+# BIOS Sony PlayStation — come procurarli legalmente
+# (Questi file NON sono inclusi nel repo per copyright.)
+
+Copiare in questa cartella di lavoro (o nella "working folder" scelta nella GUI):
+- SCPH1001.BIN (524.288 byte)
+- SCPH7502.BIN (524.288 byte)
+- SCPH5500.BIN (524.288 byte)
+
+Eseguire il dump dal proprio hardware originale con strumenti homebrew.
+La GUI mostra un indicatore verde quando ogni file esiste ed ha la dimensione corretta.
+
+EN: Sony BIOS files are NOT bundled. Dump them legally from your own hardware
+(512 KiB each) and copy them into the working folder before running the setup.
