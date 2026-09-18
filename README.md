@@ -1,5 +1,7 @@
 # ◉ PocketPSX-GUI v3.0.0
 
+![PocketPSX-GUI icon](assets/icon.png)
+
 **Setup guidato di RetroArch PS1 per Nintendo 3DS (core PCSX-ReARMed) — con interfaccia grafica moderna.**
 
 > Evoluzione di PocketPsx 2.0 (tool CLI `versione2.py`): stesso motore di ottimizzazione, nuova GUI bilingue IT/EN, download con progress bar, verifica BIOS, template di configurazione integrati.

@@ -13,6 +13,7 @@ from core import (APP_VERSION, BIOS_LIST, check_bios, get_latest_stable_version,
 
 BASE_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = BASE_DIR / "config_templates"
+ICON_FILE = BASE_DIR / "assets" / "icon.png"
 YOUTUBE_URL = "https://www.youtube.com/@DraxTube01"
 
 STRINGS = {
@@ -104,6 +105,14 @@ class App(ctk.CTk):
         # header
         self.header = ctk.CTkFrame(self, fg_color=PS_BLUE, corner_radius=0)
         self.header.pack(fill="x")
+        try:
+            from PIL import Image
+            if ICON_FILE.exists():
+                _logo = ctk.CTkImage(Image.open(ICON_FILE), size=(64, 64))
+                ctk.CTkLabel(self.header, text="", image=_logo).pack(pady=(12, 0))
+                self._logo_ref = _logo  # avoid garbage collection
+        except Exception:
+            pass
         self.title_lbl = ctk.CTkLabel(self.header, text="◉ POCKETPSX-GUI",
                                       font=ctk.CTkFont(size=26, weight="bold"),
                                       text_color="white")
